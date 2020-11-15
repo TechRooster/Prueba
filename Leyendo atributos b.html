@@ -66,25 +66,24 @@
 			});
 
 			function resaltacursos(){
-				/*
+				
 				$(".ejemplos").removeClass("linkdestacacursos");
 				/* Esto es para que al hacer clic se elimine los otros puntos resaltados */
-				/*
 				$(".cursos").addClass("linkdestacacursos");
 				/* Cuando el usuario haga clic, se llama la funcion resaltacursos
 				El codigo entra en la funcion, identifica a los que tengan class=cursos
 				Les agregara un estilo de clase previamente confeeccionado */
 				
-				$(".cursos").toggleClass("linkdestacacursos");
+				/* $(".cursos").toggleClass("linkdestacacursos"); */
 			}
 
 			function resaltaejemplos(){
-				/*
+				
 				$(".cursos").removeClass("linkdestacacursos");
 				$(".ejemplos").addClass("linkdestacacursos");
-				 Tener en cuenta el orden, en este caso, la función resaltacursos y despues resaltaejemplos */
+				/* Tener en cuenta el orden, en este caso, la función resaltacursos y despues resaltaejemplos */
 			
-				$(".ejemplos").toggleClass("linkdestacainformacion");
+				/* $(".ejemplos").toggleClass("linkdestacainformacion"); */
 			}
 			
 		</script>
@@ -120,8 +119,9 @@
 
 		<table width="100%" border="1">
 			<tr>
-				<td>Cursos destacados&nbsp;&nbsp;<input type="radio"  value="Cursos" id="cursos"></td>
-				<td>Información adicional&nbsp;&nbsp;<input type="radio"  value="Información" id="informacion"></td>
+				<td>Cursos destacados&nbsp;&nbsp;<input type="radio" name="misbotones"  value="Cursos" id="cursos"></td>
+				<td>Información adicional&nbsp;&nbsp;<input type="radio" name="misbotones"  value="Información" id="informacion"></td>
+				<!-- Cuando pongo names en radio, al hacer clic en uno se desactiva el otro-->
 			</tr>
 	</body>
 </html>

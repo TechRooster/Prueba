@@ -49,8 +49,10 @@
 			/* Para que funcione este script, se requiere subir la pagina para que tenga el protocolo HTTPS */		
 			/* $(document).ready(function(){$("a[href^='http://']").addClass("linkdestacacursos");  Esto apunta a todos los enlaces a que tengan el protocolo HTTP }); */
 			
-			document.getElementById("cursos").addEventListener("click",resaltacursos,false);
-			/* El boton cursos esta a la escucha de hacer click, y al hacerlo se llama a la funcion resaltacursos */
+			$(document).ready(function(){
+				document.getElementById("cursos").addEventListener("click",resaltacursos,false);
+			/* El boton cursos esta a la escucha de hacer click, y al hacerlo se llama a la funcion resaltacursos */	
+			});
 			
 			function resaltacursos(){
 				$(".cursos").addClass("linkdestacacursos")
@@ -59,8 +61,6 @@
 				Les agregara un estilo de clase previamente confeeccionado */
 			}
 
-
-			
 		</script>
 
 	</head>

@@ -45,9 +45,22 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<script>
 			/* Construimos funcion para ejecutar */
-			$(document).ready(function(){
-				$("a[href^='http://']").addClass("linkdestacacursos"); /* Esto apunta a todos los enlaces a que tengan el protocolo HTTP */
-			});
+			
+			/* Para que funcione este script, se requiere subir la pagina para que tenga el protocolo HTTPS */		
+			/* $(document).ready(function(){$("a[href^='http://']").addClass("linkdestacacursos");  Esto apunta a todos los enlaces a que tengan el protocolo HTTP }); */
+			
+			document.getElementById("cursos").addEventListener("click",resaltacursos,false);
+			/* El boton cursos esta a la escucha de hacer click, y al hacerlo se llama a la funcion resaltacursos */
+			
+			function resaltacursos(){
+				$(".cursos").addClass("linkdestacacursos")
+				/* Cuando el usuario haga clic, se llama la funcion resaltacursos
+				El codigo entra en la funcion, identifica a los que tengan class=cursos
+				Les agregara un estilo de clase previamente confeeccionado */
+			}
+
+
+			
 		</script>
 
 	</head>

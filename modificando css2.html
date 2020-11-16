@@ -37,6 +37,10 @@
 			$(document).ready(function(){
 				document.getElementById("aumenta1").addEventListener("click",aumentar,false);
 				document.getElementById("disminuye1").addEventListener("click",disminuir,false);
+				document.getElementById("aumenta2").addEventListener("click",aumentar,false);
+				document.getElementById("disminuye2").addEventListener("click",disminuir,false);
+				document.getElementById("aumenta3").addEventListener("click",aumentar,false);
+				document.getElementById("disminuye3").addEventListener("click",disminuir,false);
 				// Cada vez que ponemos un evento a la escucha, se genera un objeto "evento" que es el desencadenante
 				// JavaScript lo trata como un objeto con sus propiedades y sus metodos
 				// Esto permite en la función de interés, manipular ese objeto del evento.
@@ -45,18 +49,40 @@
 			});
 
 			// Creamos la funcion aumentar:
-			function aumentar(){
-				var tamDefecto = $("#noticia1").css("font-size");
+			function aumentar(e){
+				// "e" es el objeto del evento
+				// Por convencion, los parametros de tipo evento son llamados "e"
+				var zonaActuacion;
+				// Si el objeto que ha desencadenado el objeto es "aumenta1", entonces:
+				if(e.target == aumenta1){
+					zonaActuacion = "#noticia1";
+				} else if(e.target == aumenta2){
+					zonaActuacion = "#noticia2";
+				} else if(e.target == aumenta3){
+					zonaActuacion = "#noticia3";
+				}
+				// Es para definir en que botón hemos hecho click.
+
+				// Si el usuario hizo clic en la noticia2, entonces la zonaActuacion sera esa, y así con cada uno
+				var tamDefecto = $(zonaActuacion).css("font-size");
 				// alert(tamDefecto);
 				tamDefecto = parseInt(tamDefecto);
-				$("#noticia1").css("font-size",tamDefecto*1.1);
+				$(zonaActuacion).css("font-size",tamDefecto*1.1);
 			}
 
-			function disminuir(){
-				var tamDefecto = $("#noticia1").css("font-size");
-				tamDefecto = parseInt(tamDefecto);
-				$("#noticia1").css("font-size",tamDefecto*0.9);
+			function disminuir(e){
 
+				var zonaActuacion;
+				if(e.target == disminuye1){
+					zonaActuacion = "#noticia1";
+				} else if(e.target == disminuye2){
+					zonaActuacion = "#noticia2";
+				} else if(e.target == disminuye3){
+					zonaActuacion = "#noticia3";
+				}
+				var tamDefecto = $(zonaActuacion).css("font-size");
+				tamDefecto = parseInt(tamDefecto);
+				$(zonaActuacion).css("font-size",tamDefecto*0.9);
 			}
 		</script>
 	</head>

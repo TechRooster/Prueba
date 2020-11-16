@@ -34,7 +34,16 @@
 		<script src="/Jquery/js/jquery-3.5.1.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<script>
+			$(document).ready(function(){
+				document.getElementById("aumenta1").addEventListener("click",aumentar,false);
 
+			});
+
+			// Creamos la funcion aumentar:
+			function aumentar(){
+				var tamDefecto = $("#noticia1").css("font-size","2em");
+				alert(tamDefecto);
+			}
 		</script>
 	</head>
 

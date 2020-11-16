@@ -37,6 +37,11 @@
 			$(document).ready(function(){
 				document.getElementById("aumenta1").addEventListener("click",aumentar,false);
 				document.getElementById("disminuye1").addEventListener("click",disminuir,false);
+				// Cada vez que ponemos un evento a la escucha, se genera un objeto "evento" que es el desencadenante
+				// JavaScript lo trata como un objeto con sus propiedades y sus metodos
+				// Esto permite en la función de interés, manipular ese objeto del evento.
+				// Con la propiedad target puedo saber quien fue el desencadenante del evento.
+				// Si sabemos cual fue, con un condicional podemos ejecutar ciertas opciones.
 			});
 
 			// Creamos la funcion aumentar:
@@ -48,9 +53,9 @@
 			}
 
 			function disminuir(){
-				var tamDefecto = $("noticia1").css("font-size");
+				var tamDefecto = $("#noticia1").css("font-size");
 				tamDefecto = parseInt(tamDefecto);
-				$("noticia1").css("font-size",tamDefecto*0.9);
+				$("#noticia1").css("font-size",tamDefecto*0.9);
 
 			}
 		</script>

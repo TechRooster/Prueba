@@ -42,7 +42,10 @@
 			// Creamos la funcion aumentar:
 			function aumentar(){
 				var tamDefecto = $("#noticia1").css("font-size");
-				alert(tamDefecto);
+				// alert(tamDefecto);
+				tamDefecto = parseInt(tamDefecto);
+				$("#noticia1").css("font-size",tamDefecto*1.1);
+
 			}
 		</script>
 	</head>

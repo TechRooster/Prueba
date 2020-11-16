@@ -13,14 +13,24 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script>
             $(document).ready(function(){
+                /* PRIMERA FORMA */
+                /*
                 var colorFondo = $("#primer_parrafo").css("background-color");
                 alert(colorFondo);
+                /* Vemos que la variable guarda el valor del id especificado */
+
+                /* SEGUNDA FORMA */
+                /* Podemos usar codigo hexadecimal en colores */
+                $("#primer_parrafo").css("background-color","#00F");
+
+
+
             });
         </script>
     </head>
     <body>
         <p id="primer_parrafo">Primer párrafo</p>
-        <p class="destacado">Párrafo destacadao</p>
+        <p class="destacado">Párrafo destacado</p>
         <p>Tercer parrafo</p>
     </body>
 </html>

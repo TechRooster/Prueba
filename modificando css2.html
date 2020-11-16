@@ -35,12 +35,25 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<script>
 			$(document).ready(function(){
+				// La funcion querySelectorAll permite identificar elementos que tenemos en base a su etiqueta
+				var botones = document.querySelectorAll("input");
+				// Esto es para identificar todos los elementos input de la pagina web
+				// Ahora botones es un array
+				for(var i=0; botones.length; i++){
+					botones[i].addEventListener("click",aumentar,false);
+					botones[i].addEventListener("click",disminuir,false);
+					// Hasta el momento, le hemos dicho que en cualquier boton se ejecuten las dos funciones.
+					// A pesar de que llame a las dos funciones, llamara solo a una por lo que hicimos en el e.target.
+				}
+
+				/*
 				document.getElementById("aumenta1").addEventListener("click",aumentar,false);
 				document.getElementById("disminuye1").addEventListener("click",disminuir,false);
 				document.getElementById("aumenta2").addEventListener("click",aumentar,false);
 				document.getElementById("disminuye2").addEventListener("click",disminuir,false);
 				document.getElementById("aumenta3").addEventListener("click",aumentar,false);
 				document.getElementById("disminuye3").addEventListener("click",disminuir,false);
+				*/
 				// Cada vez que ponemos un evento a la escucha, se genera un objeto "evento" que es el desencadenante
 				// JavaScript lo trata como un objeto con sus propiedades y sus metodos
 				// Esto permite en la función de interés, manipular ese objeto del evento.

@@ -8,6 +8,7 @@
         <script>
             $(document).ready(function(){
                 document.getElementById("img1").addEventListener("mouseover",cambiar,false);
+                document.getElementById("img1").addEventListener("mouseout",restaurar,false);
                 // Estamos colocando a la imagen a la escucha del evento mouseover
             });
 
@@ -16,6 +17,9 @@
                 // src es el atributo que quiero modificar
             }
 
+            function restaurar(){
+                $("img").attr("src","imgs/dino2.jpg");
+            }
 
 
         </script>

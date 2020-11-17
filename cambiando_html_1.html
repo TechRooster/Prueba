@@ -6,7 +6,18 @@
         <title>Document</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script>
-            
+            $(document).ready(function(){
+                document.getElementById("img1").addEventListener("mouseover",cambiar,false);
+                // Estamos colocando a la imagen a la escucha del evento mouseover
+            });
+
+            function cambiar(){
+                $("img").attr("src","imgs/dino.jpg");
+                // src es el atributo que quiero modificar
+            }
+
+
+
         </script>
     </head>
     <body>

@@ -48,7 +48,7 @@
 		<script>
 			// Cuando se encuentre al primer vinculo, rescate el atributo href
 			// El atributo href es almacenado en la variable linkexterno
-			$document.ready(function(){
+			$(document).ready(function(){
 				$("a[href^='https://']").each(function(){
 					var linkexterno = $(this).attr("href");
 					$("#links").append("<li>"+linkexterno+"</li>");

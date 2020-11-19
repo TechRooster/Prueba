@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- EVENTOS EN JAVASCRIPT
+		¿Que son los eventos?
+		Son los desencadenantes de la accion
+		La accion es algo que ocurre cuando tenemos la web delante, tal como cargar la pagina.
+
+		EVENTOS DE RATON:
+		- click
+		- dblclick
+		- mousedown (al mantener pulsado el boton izquierdo del mouse)
+		- mouseup (al dejar de pulsar con el mouse)
+		- mouseover
+		- Mouseout
+		- Mousemove
+		
+		EVENTOS DE TECLADO
+		- keypress
+		- keydown (al mantener presionada la tecla)
+
+		EVENTOS DE DOCUMENTO O VENTANA
+		- load
+		- resize
+		- scroll
+		- unload
+
+		EVENTOS DE FORMULARIO
+		- submit
+		- reset
+		- change
+		- focus
+		- blur
+
+		Cuando hacemos click en un enlace y eso nos lleva a otra parte, eso es una accion.
+		El cuando ocurre es el evento o desencadenante de la accion.
+
+		JQUERY tiene una funcion por cada uno de los eventos y otros elementos mas.
+		$("img").click(funcion a ejecutar)
+		Cuando quiero que al presionar en las imagenes, ocurra la funcion a ejecutar.
+		Puedo declarar funciones despues del script o utilizar funciones anonimas.
+
+		
+		-->
+		<meta charset="UTF-8">
+		<title>Introducción a eventos</title>
+		<style>
+			h1{
+				text-align:center;
+			}
+			body{
+				background-color:#334873;
+				color:#FFF;
+			}
+
+			#principal{
+				width:60%;
+				margin:auto;
+			}
+
+			a{
+				color:#FFF;
+				font:bold 20px Verdana, Geneva, sans-serif;
+			} 
+		</style>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="Jquery/jquery-1.6.3.min.js"></script>
+		<script>
+		$(document).ready(function(){
+			$("html").dblclick(function(){
+				alert("Has hecho clic");
+			});
+		});
+		</script>
+	</head>
+	<body>
+
+		<div id="principal">
+
+			<h1>Introducción a eventos</h1>
+			<p><a href="#">Un link</a></p>
+			<form action="#" method="get">
+			<fieldset><legend>Formulario</legend><p>
+			<input name="button" type="button" id="el_boton" value="Un boton">
+			</p>
+			<p><input name="textfield" type="text" id="el_campo"></p></fieldset>
+			</form>
+
+		</div>
+
+
+	</body>
+</html>

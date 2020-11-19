@@ -71,6 +71,13 @@
 			$("html").dblclick(function(){
 				alert("Has hecho clic");
 			});
+		
+
+			$("a").mouseover(function(){
+				var mensaje ="<p>Estas pasando el raton por encima del mensaje</p>";
+				$("#principal").append(mensaje);
+			});
+			
 		});
 		</script>
 	</head>

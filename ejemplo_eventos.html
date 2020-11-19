@@ -77,7 +77,13 @@
 				var mensaje ="<p>Estas pasando el raton por encima del mensaje</p>";
 				$("#principal").append(mensaje);
 			});
-			
+			// Cada vez que pase el raton por un vinculo "a" se mostrara el mensaje en #principal
+
+			$("#el_boton").click(function(){
+				$(this).val("Para de hacer click!!")
+				// Val se utiliza para modificar el valor del elemento
+			})
+
 		});
 		</script>
 	</head>

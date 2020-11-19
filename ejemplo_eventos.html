@@ -80,8 +80,12 @@
 			// Cada vez que pase el raton por un vinculo "a" se mostrara el mensaje en #principal
 
 			$("#el_boton").click(function(){
-				$(this).val("Para de hacer click!!")
+				$(this).val("Para de hacer click!!");
 				// Val se utiliza para modificar el valor del elemento
+			});
+
+			$("#el_campo").focus(function(){
+				$(this).val("Ahora vas a escribir aqui");
 			});
 
 		});
